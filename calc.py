@@ -27,15 +27,18 @@ def pct(part: float, whole: float) -> float:
     return round(part / whole * 100, 1)
 
 
-def div(a: float, b: float) -> float:
-    """Divide a by b; ValueError if b is 0."""
+def _check_divisor(b: float) -> None:
     if b == 0:
         raise ValueError("cannot divide by zero")
+
+
+def div(a: float, b: float) -> float:
+    """Divide a by b; ValueError if b is 0."""
+    _check_divisor(b)
     return a / b
 
 
 def floordiv(a: float, b: float) -> float:
     """Floor-divide a by b; ValueError if b is 0."""
-    if b == 0:
-        raise ValueError("cannot divide by zero")
+    _check_divisor(b)
     return a // b
