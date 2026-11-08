@@ -1,6 +1,6 @@
 import pytest
 
-from calc import clamp
+from calc import clamp, pct
 
 
 def test_clamp():
@@ -11,3 +11,10 @@ def test_clamp():
     assert clamp(5, 5, 5) == 5
     with pytest.raises(ValueError):
         clamp(1, 10, 0)
+
+
+def test_pct():
+    assert pct(1, 3) == 33.3
+    assert pct(1, 2) == 50.0
+    assert pct(5, 0) == 0
+    assert pct(0, 4) == 0
