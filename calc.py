@@ -44,6 +44,6 @@ def floordiv(a: float, b: float) -> float:
     return a // b
 
 
-def cube(x):
+def cube(x: float) -> float:
     """Return x cubed."""
     return x**3
