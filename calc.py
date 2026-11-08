@@ -49,3 +49,8 @@ def sign(x: float) -> int:
     if x != x:
         raise ValueError("sign of NaN is undefined")
     return (x > 0) - (x < 0)
+
+
+def absolute(x: float) -> float:
+    """Return the absolute value of x."""
+    return -x if x < 0 else x

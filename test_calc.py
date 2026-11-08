@@ -1,6 +1,6 @@
 import pytest
 
-from calc import clamp, div, floordiv, pct, sign
+from calc import absolute, clamp, div, floordiv, pct, sign
 
 
 def test_clamp():
@@ -56,3 +56,10 @@ def test_sign():
 def test_sign_nan():
     with pytest.raises(ValueError):
         sign(float("nan"))
+
+
+def test_absolute():
+    assert absolute(5) == 5
+    assert absolute(-5) == 5
+    assert absolute(0) == 0
+    assert absolute(-2.5) == 2.5
