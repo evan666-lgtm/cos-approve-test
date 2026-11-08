@@ -29,6 +29,8 @@ def pct(part: float, whole: float) -> float:
 
 def median(values: list[float]) -> float:
     """Return the median of values."""
+    if not values:
+        raise ValueError("median() of an empty list")
     ordered = sorted(values)
     middle = len(ordered) // 2
     if len(ordered) % 2 == 0:
