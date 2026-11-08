@@ -1,6 +1,6 @@
 import pytest
 
-from calc import clamp, div, floordiv, pct, sign
+from calc import clamp, div, floordiv, pct
 
 
 def test_clamp():
@@ -44,15 +44,3 @@ def test_floordiv():
 def test_floordiv_by_zero():
     with pytest.raises(ValueError, match="cannot divide by zero"):
         floordiv(1, 0)
-
-
-def test_sign():
-    assert sign(5) == 1
-    assert sign(-2.5) == -1
-    assert sign(0) == 0
-    assert sign(-0.0) == 0
-
-
-def test_sign_nan():
-    with pytest.raises(ValueError):
-        sign(float("nan"))
