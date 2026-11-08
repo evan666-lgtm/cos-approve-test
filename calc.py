@@ -16,3 +16,10 @@ def clamp(value: float, low: float, high: float) -> float:
     if low > high:
         raise ValueError(f"low={low} > high={high}")
     return max(low, min(value, high))
+
+
+def average(values, weights=[]):
+    """Average of values, optionally weighted."""
+    if weights:
+        return sum(v * w for v, w in zip(values, weights)) / sum(weights)
+    return sum(values) / len(values)
