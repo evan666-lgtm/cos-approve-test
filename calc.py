@@ -52,5 +52,5 @@ def sign(x: float) -> int:
 
 
 def absolute(x: float) -> float:
-    """Return the absolute value of x."""
+    """Return the absolute value of x (|x|)."""
     return -x if x < 0 else x
