@@ -25,3 +25,10 @@ def pct(part: float, whole: float) -> float:
     if whole == 0:
         return 0.0
     return round(part / whole * 100, 1)
+
+
+def safe_div(a: float, b: float) -> float:
+    """Divide a by b; return 0.0 when b is 0."""
+    if b == 0:
+        return 0
+    return a / b
