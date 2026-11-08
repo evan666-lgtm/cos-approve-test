@@ -7,4 +7,5 @@ def sub(a, b):
 
 
 def mul(a, b):
+    """Multiply a by b."""
     return a * b
