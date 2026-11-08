@@ -1,6 +1,6 @@
 import pytest
 
-from calc import clamp, pct
+from calc import clamp, div, pct
 
 
 def test_clamp():
@@ -24,3 +24,13 @@ def test_pct():
 def test_pct_negative_whole():
     with pytest.raises(ValueError):
         pct(1, -2)
+
+
+def test_div():
+    assert div(6, 3) == 2.0
+    assert div(1, 4) == 0.25
+
+
+def test_div_by_zero():
+    with pytest.raises(ValueError, match="cannot divide by zero"):
+        div(1, 0)
