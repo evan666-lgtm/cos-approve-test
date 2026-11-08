@@ -11,8 +11,8 @@ def mul(a, b):
     return a * b
 
 
-def clamp(x, lo, hi):
-    """Limit x to the range [lo, hi]."""
-    if lo > hi:
-        raise ValueError("lo must not exceed hi")
-    return max(lo, min(x, hi))
+def clamp(value, low, high):
+    """Limit value to the range [low, high]."""
+    if low > high:
+        raise ValueError(f"low={low} > high={high}")
+    return max(low, min(value, high))
