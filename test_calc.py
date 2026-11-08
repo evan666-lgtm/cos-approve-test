@@ -11,3 +11,11 @@ def test_clamp():
     assert clamp(5, 5, 5) == 5
     with pytest.raises(ValueError):
         clamp(1, 10, 0)
+
+
+def test_average():
+    from calc import average
+
+    assert average([1, 2, 3]) == 2
+    assert average([]) == 0.0
+    assert average([1, 3], [1, 3]) == 2.5

@@ -18,8 +18,10 @@ def clamp(value: float, low: float, high: float) -> float:
     return max(low, min(value, high))
 
 
-def average(values, weights=[]):
-    """Average of values, optionally weighted."""
+def average(values, weights=None):
+    """Average of values, optionally weighted. Empty values give 0.0."""
+    if not values:
+        return 0.0
     if weights:
         return sum(v * w for v, w in zip(values, weights)) / sum(weights)
     return sum(values) / len(values)
