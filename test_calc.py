@@ -16,5 +16,11 @@ def test_clamp():
 def test_pct():
     assert pct(1, 3) == 33.3
     assert pct(1, 2) == 50.0
-    assert pct(5, 0) == 0
+    assert pct(5, 0) == 0.0
+    assert isinstance(pct(5, 0), float)
     assert pct(0, 4) == 0
+
+
+def test_pct_negative_whole():
+    with pytest.raises(ValueError):
+        pct(1, -2)

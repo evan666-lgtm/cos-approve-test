@@ -19,7 +19,9 @@ def clamp(value: float, low: float, high: float) -> float:
 
 
 def pct(part: float, whole: float) -> float:
-    """Return part as a percentage of whole, rounded to 1 decimal (0 if whole is 0)."""
+    """Return part as a percentage of whole, rounded to 1 decimal (0.0 if whole is 0; ValueError if negative)."""
+    if whole < 0:
+        raise ValueError(f"whole={whole} must not be negative")
     if whole == 0:
-        return 0
+        return 0.0
     return round(part / whole * 100, 1)
