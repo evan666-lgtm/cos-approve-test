@@ -42,3 +42,10 @@ def floordiv(a: float, b: float) -> float:
     """Floor-divide a by b; ValueError if b is 0."""
     _check_divisor(b)
     return a // b
+
+
+def sign(x: float) -> int:
+    """Return -1, 0 or 1 according to the sign of x; ValueError if x is NaN."""
+    if x != x:
+        raise ValueError("sign of NaN is undefined")
+    return (x > 0) - (x < 0)
