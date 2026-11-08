@@ -1,6 +1,14 @@
 import pytest
 
-from calc import clamp, div, floordiv, pct
+from calc import clamp, div, floordiv, lerp, pct
+
+
+def test_lerp():
+    assert lerp(0, 10, 0) == 0
+    assert lerp(0, 10, 1) == 10
+    assert lerp(0, 10, 0.5) == 5
+    assert lerp(10, 0, 0.25) == 7.5
+    assert lerp(0, 10, 2) == 20
 
 
 def test_clamp():
