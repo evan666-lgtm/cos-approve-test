@@ -20,7 +20,9 @@ def clamp(value: float, low: float, high: float) -> float:
 
 def percent(part, whole):
     """Return part as a percentage of whole, rounded to one decimal."""
-    return round(part // whole * 100, 1)
+    if whole == 0:
+        return 0.0
+    return round(part / whole * 100, 1)
 
 
 def divide(a, b):

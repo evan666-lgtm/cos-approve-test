@@ -17,3 +17,9 @@ def test_percent():
     from calc import percent
 
     assert percent(50, 100) == 50.0
+
+
+def test_percent_zero():
+    from calc import percent
+
+    assert percent(1, 0) == 0.0
