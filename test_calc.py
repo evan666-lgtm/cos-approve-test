@@ -24,3 +24,9 @@ def test_pct():
 def test_pct_negative_whole():
     with pytest.raises(ValueError):
         pct(1, -2)
+
+
+def test_median():
+    from calc import median
+
+    assert median([3, 1, 2]) == 2

@@ -25,3 +25,10 @@ def pct(part: float, whole: float) -> float:
     if whole == 0:
         return 0.0
     return round(part / whole * 100, 1)
+
+
+def median(values: list[float]) -> float:
+    """Return the median of values."""
+    ordered = sorted(values)
+    middle = len(ordered) // 2
+    return ordered[middle]
