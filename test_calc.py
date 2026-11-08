@@ -51,3 +51,8 @@ def test_sign():
     assert sign(-2.5) == -1
     assert sign(0) == 0
     assert sign(-0.0) == 0
+
+
+def test_sign_nan():
+    with pytest.raises(ValueError):
+        sign(float("nan"))
