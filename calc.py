@@ -9,3 +9,11 @@ def sub(a, b):
 def mul(a, b):
     """Multiply a by b."""
     return a * b
+
+
+def div(a, b):
+    return a / b
+
+
+def avg(xs):
+    return sum(xs) / len(xs)
