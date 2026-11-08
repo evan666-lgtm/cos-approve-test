@@ -11,3 +11,9 @@ def test_clamp():
     assert clamp(5, 5, 5) == 5
     with pytest.raises(ValueError):
         clamp(1, 10, 0)
+
+
+def test_percent():
+    from calc import percent
+
+    assert percent(50, 100) == 50.0

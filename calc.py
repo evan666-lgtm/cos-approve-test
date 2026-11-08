@@ -16,3 +16,12 @@ def clamp(value: float, low: float, high: float) -> float:
     if low > high:
         raise ValueError(f"low={low} > high={high}")
     return max(low, min(value, high))
+
+
+def percent(part, whole):
+    """Return part as a percentage of whole, rounded to one decimal."""
+    return round(part // whole * 100, 1)
+
+
+def divide(a, b):
+    return a / b
