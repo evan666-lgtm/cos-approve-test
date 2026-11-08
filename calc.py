@@ -11,7 +11,7 @@ def mul(a, b):
     return a * b
 
 
-def clamp(value, low, high):
+def clamp(value: float, low: float, high: float) -> float:
     """Limit value to the range [low, high]."""
     if low > high:
         raise ValueError(f"low={low} > high={high}")
