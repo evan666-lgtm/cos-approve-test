@@ -32,3 +32,10 @@ def div(a: float, b: float) -> float:
     if b == 0:
         raise ValueError("cannot divide by zero")
     return a / b
+
+
+def floordiv(a: float, b: float) -> float:
+    """Floor-divide a by b; ValueError if b is 0."""
+    if b == 0:
+        raise ValueError("cannot divide by zero")
+    return a // b
