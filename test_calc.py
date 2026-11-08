@@ -44,3 +44,11 @@ def test_floordiv():
 def test_floordiv_by_zero():
     with pytest.raises(ValueError, match="cannot divide by zero"):
         floordiv(1, 0)
+
+
+def test_cube():
+    from calc import cube
+    assert cube(2) == 8
+    assert cube(-3) == -27
+    assert cube(0) == 0
+    assert cube(0.5) == 0.125
