@@ -1,0 +1,12 @@
+name: r9gh-ci
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require a CHANGELOG entry
+        run: |
+          test -f CHANGELOG.md || { echo "CHANGELOG.md is missing"; exit 1; }
