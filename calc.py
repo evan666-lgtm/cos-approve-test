@@ -42,10 +42,3 @@ def floordiv(a: float, b: float) -> float:
     """Floor-divide a by b; ValueError if b is 0."""
     _check_divisor(b)
     return a // b
-
-
-def square(x: float) -> float:
-    """Return x squared; TypeError for non-numbers."""
-    if isinstance(x, bool) or not isinstance(x, (int, float)):
-        raise TypeError(f"square() needs a number, not {type(x).__name__}")
-    return x * x
