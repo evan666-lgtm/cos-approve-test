@@ -45,5 +45,7 @@ def floordiv(a: float, b: float) -> float:
 
 
 def square(x: float) -> float:
-    """Return x squared."""
+    """Return x squared; TypeError for non-numbers."""
+    if isinstance(x, bool) or not isinstance(x, (int, float)):
+        raise TypeError(f"square() needs a number, not {type(x).__name__}")
     return x * x
