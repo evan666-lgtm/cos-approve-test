@@ -1,6 +1,6 @@
 import pytest
 
-from calc import clamp, div, floordiv, pct, square
+from calc import clamp, div, floordiv, negate, pct, square
 
 
 def test_clamp():
@@ -54,3 +54,9 @@ def test_square():
 
 def test_square_float():
     assert square(1.5) == 2.25
+
+
+def test_negate():
+    assert negate(3) == -3
+    assert negate(-2.5) == 2.5
+    assert negate(0) == 0

@@ -49,3 +49,8 @@ def square(x: float) -> float:
     if isinstance(x, bool) or not isinstance(x, (int, float)):
         raise TypeError(f"square() needs a number, not {type(x).__name__}")
     return x * x
+
+
+def negate(x: float) -> float:
+    """Return -x."""
+    return -x
