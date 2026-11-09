@@ -19,7 +19,13 @@ def clamp(value: float, low: float, high: float) -> float:
 
 
 def lerp(a: float, b: float, t: float) -> float:
-    """Linearly interpolate from a to b by t, with t clamped to [0, 1]."""
+    """Linearly interpolate from a to b by t, with t clamped to [0, 1].
+
+    >>> lerp(0, 10, 0.5)
+    5.0
+    >>> lerp(0, 10, 2)
+    10.0
+    """
     t = max(0.0, min(t, 1.0))
     return a + (b - a) * t
 
