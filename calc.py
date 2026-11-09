@@ -50,4 +50,5 @@ def mod(a: float, b: float) -> float:
 
 
 def avg(values):
+    """Mean of values."""
     return sum(values) / len(values)
