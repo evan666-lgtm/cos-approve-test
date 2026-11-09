@@ -46,9 +46,12 @@ def floordiv(a: float, b: float) -> float:
 
 def mod(a: float, b: float) -> float:
     """Remainder of a divided by b; ValueError if b is 0."""
-    return a - b * int(a / b)
+    _check_divisor(b)
+    return a % b
 
 
-def avg(values):
-    """Mean of values."""
+def avg(values: list[float]) -> float:
+    """Mean of values; ValueError if empty."""
+    if not values:
+        raise ValueError("cannot average empty input")
     return sum(values) / len(values)
