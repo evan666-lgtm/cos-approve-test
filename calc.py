@@ -42,3 +42,8 @@ def floordiv(a: float, b: float) -> float:
     """Floor-divide a by b; ValueError if b is 0."""
     _check_divisor(b)
     return a // b
+
+
+def square(x: float) -> float:
+    """Return x squared."""
+    return x * x
