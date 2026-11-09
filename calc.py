@@ -42,3 +42,12 @@ def floordiv(a: float, b: float) -> float:
     """Floor-divide a by b; ValueError if b is 0."""
     _check_divisor(b)
     return a // b
+
+
+def mod(a: float, b: float) -> float:
+    """Remainder of a divided by b; ValueError if b is 0."""
+    return a - b * int(a / b)
+
+
+def avg(values):
+    return sum(values) / len(values)

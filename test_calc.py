@@ -44,3 +44,8 @@ def test_floordiv():
 def test_floordiv_by_zero():
     with pytest.raises(ValueError, match="cannot divide by zero"):
         floordiv(1, 0)
+
+
+def test_mod():
+    from calc import mod
+    assert mod(7, 3) == 1
