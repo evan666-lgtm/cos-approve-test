@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check square docstring
+      - name: Check float test
         run: |
-          grep -q '"""Return x squared' calc.py || { echo "square() needs a docstring starting with 'Return x squared'"; exit 1; }
+          grep -q 'def test_square_float' test_calc.py || { echo "square() needs a test_square_float test"; exit 1; }
