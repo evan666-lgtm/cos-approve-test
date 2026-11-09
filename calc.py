@@ -18,6 +18,11 @@ def clamp(value: float, low: float, high: float) -> float:
     return max(low, min(value, high))
 
 
+def lerp(a: float, b: float, t: float) -> float:
+    """Linearly interpolate from a to b by t (t=0 gives a, t=1 gives b)."""
+    return a + (b - a) * t
+
+
 def pct(part: float, whole: float) -> float:
     """Return part as a percentage of whole, rounded to 1 decimal (0.0 if whole is 0; ValueError if negative)."""
     if whole < 0:
