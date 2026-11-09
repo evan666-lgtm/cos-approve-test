@@ -50,3 +50,7 @@ def test_square():
     assert square(3) == 9
     assert square(-3) == 9
     assert square(0) == 0
+
+
+def test_square_float():
+    assert square(1.5) == 2.25
