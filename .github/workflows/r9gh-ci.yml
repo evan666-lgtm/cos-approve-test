@@ -1,0 +1,12 @@
+name: r9gh-ci
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check square docstring
+        run: |
+          grep -q '"""Return x squared' calc.py || { echo "square() needs a docstring starting with 'Return x squared'"; exit 1; }
