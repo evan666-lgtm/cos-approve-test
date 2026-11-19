@@ -7,3 +7,7 @@ def test_retries():
 
 def test_timeout():
     assert timeout() == 30
+
+
+def test_timeout_positive():
+    assert timeout() > 0
