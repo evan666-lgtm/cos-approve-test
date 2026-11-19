@@ -1,9 +1,9 @@
-from app.timeouts import timeout, retries
+from app import timeouts
 
 
 def test_retries():
-    assert retries() == 3
+    assert timeouts.retries() == 3
 
 
-def test_timeout():
-    assert timeout() == 30
+def test_login_timeout():
+    assert timeouts.login_timeout() == 30
