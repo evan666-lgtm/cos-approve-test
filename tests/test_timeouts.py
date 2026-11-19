@@ -1,4 +1,4 @@
-from app.timeouts import retries, timeout
+from app.timeouts import timeout, retries
 
 
 def test_retries():
