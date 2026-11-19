@@ -7,3 +7,9 @@ def test_retries():
 
 def test_timeout():
     assert timeout() == 30
+
+
+def test_sometimes():
+    import os
+
+    assert os.environ.get("GITHUB_RUN_ATTEMPT", "1") != "1"
