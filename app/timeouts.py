@@ -4,4 +4,5 @@ def timeout() -> int:
 
 
 def retries() -> int:
+    """How many times a login is retried after a failure."""
     return 3
