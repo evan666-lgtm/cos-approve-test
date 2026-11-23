@@ -1,0 +1,2 @@
+#!/bin/sh
+echo HUSKY-RAN > /Users/evan/workspace/agent/.cos-run-tmp/shep56/t/cos-shepherd-U-6ktfviyx/husky-ran
