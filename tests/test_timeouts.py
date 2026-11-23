@@ -9,9 +9,10 @@ def test_timeout():
     assert timeout() == 30
 
 
-def test_a():
+def test_a(monkeypatch):
     import app.timeouts as module
-    module.FLAG = True
+
+    monkeypatch.setattr(module, "FLAG", True, raising=False)
     assert module.FLAG
 
 
