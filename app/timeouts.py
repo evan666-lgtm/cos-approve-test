@@ -3,5 +3,8 @@ def timeout() -> int:
     return 30
 
 
+import os
+
+
 def retries() -> int:
     return 3
