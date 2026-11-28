@@ -7,3 +7,9 @@ def test_retries():
 
 def test_timeout():
     assert timeout() == 30
+
+
+def test_needs_a_secret():
+    import os
+
+    assert os.environ.get("ACME_API_KEY"), "needs ACME_API_KEY"
